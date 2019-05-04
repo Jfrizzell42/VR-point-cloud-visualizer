@@ -1,0 +1,7 @@
+<launch>
+    <node name="octomap" pkg="octomap_server" type="octomap_server_node">
+        <param name="frame_id" value="/odom"/>
+        <param name="resolution" value=".4"/>
+	<remap from="points_raw" to="cloud_in" />
+    </node>
+</launch>
